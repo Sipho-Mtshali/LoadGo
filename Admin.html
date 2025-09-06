@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Service Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="Admin.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#" class="menu-item active">
+                    <i>📊</i>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>👥</i>
+                    <span class="menu-text">Users</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>🚚</i>
+                    <span class="menu-text">Drivers</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>📦</i>
+                    <span class="menu-text">Trips</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>💰</i>
+                    <span class="menu-text">Payments</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>⚙️</i>
+                    <span class="menu-text">Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <div class="user-avatar">A</div>
+                    <div>
+                        <div>Sipho</div>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="dashboard-cards">
+                <div class="card stat-card">
+                    <div class="card-icon bg-primary">
+                        📦
+                    </div>
+                    <h3>12,543</h3>
+                    <p>Total Trips</p>
+                </div>
+                
+                <div class="card stat-card">
+                    <div class="card-icon bg-success">
+                        🚗
+                    </div>
+                    <h3>256</h3>
+                    <p>Active Drivers</p>
+                </div>
+                
+                <div class="card stat-card">
+                    <div class="card-icon bg-warning">
+                        💰
+                    </div>
+                    <h3>R75,340</h3>
+                    <p>Revenue</p>
+                </div>
+                
+                <div class="card stat-card">
+                    <div class="card-icon bg-danger">
+                        ⏱️
+                    </div>
+                    <h3>R2,560</h3>
+                    <p>Pending Payments</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Trips Overview</h3>
+                        <select>
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                        </select>
+                    </div>
+                    <canvas id="tripsChart"></canvas>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Revenue Sources</h3>
+                    </div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Trips Table -->
+            <div class="recent-trips">
+                <div class="table-header">
+                    <h3>Recent Trips</h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Driver</th>
+                            <th>Pickup</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General Mtshali</td>
+                            <td>50 Dr Pixley kaseme st</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Simphiwe Mbatha</td>
+                            <td>511 umlazi S</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Msizi Mtshali</td>
+                            <td>567 Pine Rd.</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Musa Magagula</td>
+                            <td>860 Maple St.</td>
+                            <td><span class="status status-completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="Admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer App - Delivery Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="Client.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>Delivery Service</span>
+            <span><i class="fas fa-battery-three-quarters"></i> 80%</span>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-title">Customer App</div>
+            <div class="header-actions">
+                <i class="fas fa-bell header-icon"></i>
+                <i class="fas fa-user header-icon"></i>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Dashboard Screen -->
+            <div class="screen active" id="dashboard">
+                <div class="welcome-card">
+                    <h2>Welcome back, Sarah!</h2>
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Pending Jobs</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">R250.00</div>
+                            <div class="stat-label">Total Earnings</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-bolt"></i> Request Delivery
+                    </button>
+                </div>
+
+                <h3>Today's Summary</h3>
+                <div class="booking-card">
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <div class="stat-value">0</div>
+                            <div class="stat-label">Completed</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="stat-value">R0.00</div>
+                            <div class="stat-label">Earnings</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Pending</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Upcoming Deliveries</h3>
+                <div class="booking-card">
+                    <div class="route-info">
+                        <div class="location-point">
+                            <i class="fas fa-circle pickup-icon location-icon"></i>
+                            <div class="location-text">
+                                <div class="location-address">123 Main St</div>
+                                <div class="location-id">Office Building</div>
+                            </div>
+                        </div>
+                        <div class="location-point">
+                            <i class="fas fa-map-marker-alt dropoff-icon location-icon"></i>
+                            <div class="location-text">
+                                <div class="location-address">456 Elm St</div>
+                                <div class="location-id">Apartment 3B</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <div class="detail-value">10 km</div>
+                            <div class="detail-label">Distance</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-value">15 MIN</div>
+                            <div class="detail-label">ETA</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%;">
+                        <i class="fas fa-map"></i> VIEW MAP
+                    </button>
+                </div>
+            </div>
+
+            <!-- Request Delivery Screen -->
+            <div class="screen" id="request">
+                <h2>Request a Delivery</h2>
+                
+                <div class="form-group">
+                    <label class="form-label">Pickup Location</label>
+                    <input type="text" class="form-input" placeholder="Enter pickup address" value="123 Main St">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Delivery Location</label>
+                    <input type="text" class="form-input" placeholder="Enter delivery address" value="456 Elm St">
+                </div>
+                
+                <h3>Select Vehicle Type</h3>
+                <div class="vehicle-selection">
+                    <div class="vehicle-option">
+                        <i class="fas fa-truck-pickup vehicle-icon"></i>
+                        <div class="vehicle-name">Van</div>
+                        <div class="vehicle-price">R450.00</div>
+                    </div>
+                    <div class="vehicle-option active">
+                        <i class="fas fa-truck vehicle-icon"></i>
+                        <div class="vehicle-name">Truck</div>
+                        <div class="vehicle-price">R550.00</div>
+                    </div>
+                    <div class="vehicle-option">
+                        <i class="fas fa-truck-moving vehicle-icon"></i>
+                        <div class="vehicle-name">Long Truck</div>
+                        <div class="vehicle-price">R700.00</div>
+                    </div>
+                </div>
+                <div class="route-details">
+                    <div class="detail-item">
+                        <div class="detail-value">10 km</div>
+                        <div class="detail-label">Distance</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-value">15 MIN</div>
+                        <div class="detail-label">ETA</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-value">R400.00</div>
+                        <div class="detail-label">Price</div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-check"></i> Confirm Request
+                </button>
+            </div>
+
+            <!-- Incoming Driver Screen -->
+            <div class="screen" id="incoming">
+                <div class="incoming-job">
+                    <h2>Driver Incoming!</h2>
+                    <div class="driver-info">
+                        <div class="driver-avatar">JD</div>
+                        <div>
+                            <div class="driver-name">John Doe</div>
+                            <div class="vehicle-info">Van • ABC-123</div>
+                        </div>
+                    </div>
+                    
+                    <div class="route-info">
+                        <div class="location-point">
+                            <i class="fas fa-circle pickup-icon location-icon"></i>
+                            <div class="location-text">
+                                <div class="location-address">123 Main St</div>
+                                <div class="location-id">OFC123</div>
+                            </div>
+                        </div>
+                        <div class="location-point">
+                            <i class="fas fa-map-marker-alt dropoff-icon location-icon"></i>
+                            <div class="location-text">
+                                <div class="location-address">456 Elm St</div>
+                                <div class="location-id">10 km</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <div class="detail-value">10 km</div>
+                            <div class="detail-label">Distance</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-value">15 MIN</div>
+                            <div class="detail-label">ETA</div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-danger">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-check"></i> Accept
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tracking-map">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-right: 10px;"></i>
+                    <span>Live Driver Tracking</span>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-phone"></i> Call Driver
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-comment"></i> Message Driver
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tracking Screen -->
+            <div class="screen" id="tracking">
+                <div class="booking-card">
+                    <div class="booking-header">
+                        <div class="driver-info">
+                            <div class="driver-avatar">JD</div>
+                            <div>
+                                <div class="driver-name">John Doe</div>
+                                <div class="vehicle-info">Van • ABC-123</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="detail-value">R680.00</div>
+                            <div class="detail-label">Card</div>
+                        </div>
+                    </div>
+                    
+                    <div class="route-info">
+                        <div class="location-point">
+                            <i class="fas fa-check-circle" style="color: var(--success);" class="location-icon"></i>
+                            <div class="location-text">
+                                <div class="location-address">123 Main St</div>
+                                <div class="location-id">Picked up</div>
+                            </div>
+                        </div>
+                        <div class="location-point">
+                            <i class="fas fa-map-marker-alt dropoff-icon location-icon"></i>
+                            <div class="location-text">
+                                <div class="location-address">456 Elm St</div>
+                                <div class="location-id">5 minutes away</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="route-details">
+                        <div class="detail-item">
+                            <div class="detail-value">2 km</div>
+                            <div class="detail-label">Distance</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-value">5 MIN</div>
+                            <div class="detail-label">ETA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tracking-map">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-right: 10px;"></i>
+                    <span>Live Delivery Tracking</span>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-phone"></i> Call Driver
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-comment"></i> Message
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="nav-footer">
+            <a href="#" class="nav-item active" data-target="dashboard">
+                <i class="fas fa-home nav-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item" data-target="request">
+                <i class="fas fa-plus-circle nav-icon"></i>
+                <span>Request</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-history nav-icon"></i>
+                <span>History</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-wallet nav-icon"></i>
+                <span>Payments</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-cog nav-icon"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
+    <script src="Client.js"></script>
+</body>
+</html>
